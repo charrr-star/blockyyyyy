@@ -76,7 +76,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 # -------------------------
 # CSS animations
 # -------------------------
@@ -179,6 +178,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
