@@ -79,6 +79,19 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+ <br>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+    <script>
+      const audio = document.getElementById("bg-music");
+      const volumeControl = document.getElementById("volumeControl");
+      audio.volume = 0.5;  // default volume
+      volumeControl.addEventListener("input", function() {
+          audio.volume = this.value;
+      });
+    </script>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # Volume slider
@@ -197,6 +210,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
