@@ -71,14 +71,15 @@ st.title("🧩 Chain Keeper – Blockchain Puzzle Game")
 # -------------------------
 # 🎶 Background Music
 # -------------------------
+
 import streamlit as st
 
-# Hidden audio element
-st.markdown("""
-<audio id="bg-audio" loop style="display:none">
-    <source src="https://drive.google.com/uc?export=open&id=1LSga2Qf3V8VHMfxb8M96YwptCsqONP9T" type="audio/mp3">
-</audio>
-""", unsafe_allow_html=True)
+# Direct download link
+audio_url = "https://drive.google.com/uc?export=download&id=1LSga2Qf3V8VHMfxb8M96YwptCsqONP9T"
+
+# Streamlit audio player
+st.audio(audio_url, format="audio/mp3")
+
 
 # Play button
 if st.button("▶️ Play Background Music"):
@@ -191,6 +192,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
