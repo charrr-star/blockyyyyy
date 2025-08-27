@@ -76,6 +76,19 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+# 🎵 Volume control
+volume = st.slider("🔊 Volume", 0, 100, 50)
+
+st.markdown(f"""
+<audio autoplay loop controls style="width:100%;" id="bg-audio">
+  <source src="judas.mp3" type="audio/mpeg">
+</audio>
+<script>
+  var audio = document.getElementById("bg-audio");
+  audio.volume = {volume}/100;
+</script>
+""", unsafe_allow_html=True)
+
 # -------------------------
 # CSS animations
 # -------------------------
@@ -178,4 +191,5 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
