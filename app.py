@@ -68,7 +68,9 @@ bc = st.session_state.blockchain
 st.set_page_config(page_title="Chain Keeper Game", page_icon="🔗", layout="centered")
 st.title("🧩 Chain Keeper – Blockchain Puzzle Game")
 
-# 🎶 Background music (judas.mp3)
+# -------------------------
+# 🎶 Background Music
+# -------------------------
 st.markdown(
     """
     <audio autoplay loop id="bg-audio" muted>
@@ -82,7 +84,7 @@ st.markdown(
 # Volume slider
 volume = st.slider("🔊 Volume", 0, 100, 50)
 
-# Inject JS to control volume + unmute when slider moves
+# Inject JS for volume + unmute
 st.markdown(f"""
 <script>
   var audio = document.getElementById("bg-audio");
@@ -195,6 +197,8 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
+
 
 
 
