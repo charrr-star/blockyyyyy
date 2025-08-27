@@ -78,7 +78,7 @@ import streamlit as st
 audio_url = "https://drive.google.com/uc?export=download&id=1LSga2Qf3V8VHMfxb8M96YwptCsqONP9T"
 
 # Streamlit audio player
-st.audio(audio_url, format="audio/mp3")
+st.audio( "https://drive.google.com/uc?export=download&id=1LSga2Qf3V8VHMfxb8M96YwptCsqONP9T", format="audio/mp3")
 
 
 # Play button
@@ -192,6 +192,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
