@@ -72,7 +72,7 @@ st.title("🧩 Chain Keeper – Blockchain Puzzle Game")
 # 🎶 Background Music
 st.markdown(
     """
-    < <audio autoplay loop style="display:none">
+     <audio autoplay loop style="display:none">
         <source src="https://raw.githubusercontent.com/charrr-star/blockyyyyy/main/judas.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
@@ -203,6 +203,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
