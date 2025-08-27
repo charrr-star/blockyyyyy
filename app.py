@@ -77,8 +77,7 @@ st.markdown(
         <source src="https://raw.githubusercontent.com/charrr-star/blockyyyyy/main/judas.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    """,
-    unsafe_allow_html=True
+    """, unsafe_allow_html=True
 )
 
 # -------------------------
@@ -183,6 +182,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
