@@ -84,13 +84,12 @@ st.markdown(
 
 # Volume slider
 volume = st.slider("🔊 Volume", 0, 100, 50)
-
 # Inject JS for volume + unmute
 st.markdown(f"""
 <script>
   var audio = document.getElementById("bg-audio");
   if (audio) {{
-    audio.muted = false;
+    audio.muted = true;
     audio.volume = {volume}/100;
   }}
 </script>
@@ -198,6 +197,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
