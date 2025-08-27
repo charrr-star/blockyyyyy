@@ -67,6 +67,7 @@ bc = st.session_state.blockchain
 # -------------------------
 st.set_page_config(page_title="Chain Keeper Game", page_icon="🔗", layout="centered")
 st.title("🧩 Chain Keeper – Blockchain Puzzle Game")
+
 # 🎶 Background music (judas.mp3)
 st.markdown(
     """
@@ -178,6 +179,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
