@@ -70,22 +70,18 @@ st.title("🧩 Chain Keeper – Blockchain Puzzle Game")
 
 # -------------------------
 # 🎶 Background Music
+# -------------------------
 st.markdown(
     """
-     <audio autoplay loop style="display:none">
+    <audio autoplay loop id="bg-audio" muted>
+    <audio controls autoplay loop>
         <source src="https://raw.githubusercontent.com/charrr-star/blockyyyyy/main/judas.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-<input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+    """,
+    unsafe_allow_html=True
+)
 
-<script>
-const audio = document.getElementById('bgmusic');  // your <audio> must have id="bgmusic"
-const volumeControl = document.getElementById('volumeControl');
-audio.volume = 0.5;  // default volume
-volumeControl.addEventListener('input', function() {
-    audio.volume = this.value;
-});
-</script>
 
 # Volume slider
 volume = st.slider("🔊 Volume", 0, 100, 50)
@@ -203,6 +199,8 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
+
 
 
 
