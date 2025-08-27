@@ -79,7 +79,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
- <br>
     <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
     <script>
       const audio = document.getElementById("bg-music");
@@ -210,6 +209,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
