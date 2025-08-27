@@ -90,7 +90,7 @@ st.markdown(f"""
   var audio = document.getElementById("bg-audio");
   if (audio) {{
     audio.muted = false;
-    audio.volume = {volume}/100-50;
+    audio.volume = {volume}/100;
   }}
 </script>
 """, unsafe_allow_html=True)
@@ -197,6 +197,7 @@ if st.button("✨ Repair"):
 if bc.is_chain_valid():
     st.balloons()
     st.success("🎆 Woohoo! Blockchain integrity restored!")
+
 
 
 
